@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: rgb(44, 44, 44);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.container {
+  margin: 20px;
+}
+
+.info-aluno,
+.tabela-notas,
+.media-geral,
+.maior-media,
+.lista-alunos {
+  margin-bottom: 20px;
+}
+
+.titulo-botao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(44, 44, 44);
+  color: white;
+  cursor: pointer;
+}
