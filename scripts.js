@@ -7,3 +7,14 @@ let materiaFavorita = prompt("Qual a sua matéria favorita?");
 
 // Confirmar os dados inseridos
 let confirmacao = confirm("Confirma os dados inseridos?");
+
+//[M2S05] Ex. 03 - LabScore (Pt.2)
+// Atualiza os dados no HTML
+if (confirmacao) {
+  document.getElementById("nome-aluno").textContent = "Nome: " + nomeAluno;
+  document.getElementById("idade-aluno").textContent = "Idade: " + idadeAluno;
+  document.getElementById("serie-aluno").textContent = "Serie: " + serieAluno;
+  document.getElementById("escola-aluno").textContent = "Escola: " + nomeEscola;
+  document.getElementById("materia-preferida").textContent =
+    "Matéria Favorita: " + materiaFavorita;
+}
