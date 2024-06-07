@@ -1,3 +1,5 @@
+import { adicionarLinha } from './addLinha.js';
+
 //[M2S05] Ex. 02 - LabScore (Pt.2)
 let nomeAluno = prompt("Qual o nome do aluno?");
 let idadeAluno = prompt("Qual a idade do aluno?");
@@ -18,3 +20,6 @@ if (confirmacao) {
   document.getElementById("materia-preferida").textContent =
     "Matéria Favorita: " + materiaFavorita;
 }
+
+//[M2S05] Ex. 04 - LabScore (Pt.2)
+document.querySelector('button').addEventListener('click', adicionarLinha);
