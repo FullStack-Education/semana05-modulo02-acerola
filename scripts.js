@@ -1,5 +1,6 @@
 import { adicionarLinha, mediaMaterias } from './addLinha.js';
 import { atualizarMediaGeral } from './mediaGeral.js';
+import { encontrarMaiorMedia } from './maiorMedia.js';
 
 //[M2S05] Ex. 02 - LabScore (Pt.2)
 let nomeAluno = prompt("Qual o nome do aluno?");
@@ -8,11 +9,9 @@ let serieAluno = prompt("Qual a série do aluno?");
 let nomeEscola = prompt("Qual o nome da escola?");
 let materiaFavorita = prompt("Qual a sua matéria favorita?");
 
-// Confirmar os dados inseridos
 let confirmacao = confirm("Confirma os dados inseridos?");
 
 //[M2S05] Ex. 03 - LabScore (Pt.2)
-// Atualiza os dados no HTML
 if (confirmacao) {
   document.getElementById("nome-aluno").textContent = "Nome: " + nomeAluno;
   document.getElementById("idade-aluno").textContent = "Idade: " + idadeAluno;
@@ -26,6 +25,10 @@ if (confirmacao) {
 document.querySelector('button').addEventListener('click', () => {
   adicionarLinha();
   atualizarMediaGeral();
+
+  //[M2S05] Ex. 07 - LabScore (Pt.2)
+  const maiorMedia = encontrarMaiorMedia(mediaMaterias);
+  document.getElementById('maior-media').textContent = `A maior média entre as matérias é: ${maiorMedia}`;
 });
 
 //[M2S05] Ex. 06 - LabScore (Pt.2)
