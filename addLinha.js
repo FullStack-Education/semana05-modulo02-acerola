@@ -1,3 +1,5 @@
+export let mediaMaterias = [];
+
 export function adicionarLinha() {
   const materia = prompt("Qual a matéria deseja cadastrar?");
   if (!materia) return;
@@ -16,6 +18,7 @@ export function adicionarLinha() {
   }
 
   const media = calcularMedia(notas);
+  mediaMaterias.push(parseFloat(media));
   adicionarLinhaTabela(materia, notas, media);
 }
 

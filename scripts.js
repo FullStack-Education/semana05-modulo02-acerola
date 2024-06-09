@@ -1,4 +1,5 @@
 import { adicionarLinha } from './addLinha.js';
+import { atualizarMediaGeral } from './mediaGeral.js';
 
 //[M2S05] Ex. 02 - LabScore (Pt.2)
 let nomeAluno = prompt("Qual o nome do aluno?");
@@ -21,5 +22,8 @@ if (confirmacao) {
     "Matéria Favorita: " + materiaFavorita;
 }
 
-//[M2S05] Ex. 04 - LabScore (Pt.2)
-document.querySelector('button').addEventListener('click', adicionarLinha);
+//[M2S05] Ex. 04 - LabScore (Pt.2) & Ex. 05
+document.querySelector('button').addEventListener('click', () => {
+  adicionarLinha();
+  atualizarMediaGeral();
+});
