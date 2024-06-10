@@ -9,7 +9,7 @@ export function adicionarLinha() {
 
   while (i < 4) {
     const nota = parseFloat(prompt(`Digite a nota ${i + 1} para ${materia}:`));
-    if (!isNaN(nota)) {
+    if (!isNaN(nota) && nota >= 0 && nota <= 10) {
       notas.push(nota);
       i++;
     } else {
@@ -28,7 +28,7 @@ function calcularMedia(notas) {
 }
 
 function adicionarLinhaTabela(materia, notas, media) {
-  const tbody = document.querySelector('tbody');
+  const tbody = document.querySelector("tbody");
   tbody.innerHTML += `
       <tr>
           <td>${materia}</td>
